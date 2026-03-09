@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form v1 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <form id="login-form" novalidate>
+      <h1 id="login-head">Login</h1>
+      <div id="inputs-wrapper">
+          <input type="email" placeholder="Enter your email" id="email" name="email" required autocomplete="email" aria-label="Email address" aria-required="true">
+          <div id="password-container">
+              <input type="password" placeholder="Enter your password" id="password" name="password" required autocomplete="current-password" aria-label="Password" aria-required="true">
+              <i id="eye-icon" class="fa fa-eye" role="button" tabindex="0" aria-label="Toggle password visibility" aria-pressed="false"></i>
+          </div>
+      </div>
+      <button id="button" type="submit" aria-label="Submit login form">Sign In</button>
+      <div id="form-error" role="alert" aria-live="polite" style="display: none; color: #ff6b6b; font-size: 13px; margin-top: 10px; text-align: center;"></div>
+    </form>
+    <h4 id="h4">Or Sign In with</h4>
+    <div id="login-with-container">
+        <button id="google" type="button" aria-label="Sign in with Google" title="Sign in with Google">
+            <img src="google img.png" alt="">
+        </button>
+        <button id="microsoft" type="button" aria-label="Sign in with Microsoft" title="Sign in with Microsoft">
+            <img src="microsoft img.png" alt="">
+        </button>
+        <button id="apple" type="button" aria-label="Sign in with Apple" title="Sign in with Apple">
+            <img src="apple img.png" alt="">
+        </button>
+    </div>
+    <footer id="footer">
+        <p>&copy; 2026 DremuDev. All rights reserved.</p>
+    </footer>
+</body>
+</html>

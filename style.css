@@ -1,0 +1,307 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#login-head{
+    text-align: center;
+    font-family: monospace;
+    font-size: 52px;
+    font-weight: 900;
+    color: #7399d1;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+#inputs-wrapper {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#email, #password {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #d4d4db;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+#email:invalid:not(:placeholder-shown),
+#password:invalid:not(:placeholder-shown) {
+    border-color: #ff6b6b;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
+}
+
+#password-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+#password {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    font-size: 14px;
+    border: 2px solid #d4d4db;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    color: #333;
+    margin: 0;
+}
+
+#email:hover, #password:hover {
+    border-color: #c5c5ce;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+#email:focus, #password:focus {
+    outline: none;
+    border-color: rgb(0, 123, 255);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
+    transform: translateY(-3px);
+    color: #0078ff;
+}
+
+#password-container #password:focus {
+    transform: translateY(-3px);
+}
+
+#eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    transition: all 0.3s ease;
+    color: #bbb;
+    transform-origin: center;
+}
+
+#eye-icon:hover {
+    color: #999;
+}
+
+#password-container:hover #eye-icon {
+    transform: translateY(-50%) scale(1.2);
+    color: #999;
+}
+
+#password:focus ~ #eye-icon {
+    color: rgb(0, 123, 255);
+}
+
+#button{
+      background-color: rgb(0, 123, 255);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+}
+
+#button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+      background-color: #0066ff;
+}
+
+#button:focus {
+      outline: 2px solid #0078ff;
+      outline-offset: 2px;
+      transform: translateY(-3px) scale(1.05);
+}
+
+#button:active {
+      transform: translateY(-1px) scale(0.98);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+#button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transform: none;
+}
+#h4{
+    font-family: monospace;
+    font-size: 16px;
+    text-decoration: dashed;
+    text-align: center;
+    color: #666;
+    margin: 20px 0 15px 0;
+}
+#login-with-container{
+    display: flex ;
+    justify-content: center;
+    gap: 20px;        
+}
+#google, #microsoft, #apple {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    padding: 0;
+    border: 2px solid transparent;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#google img, #microsoft img, #apple img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+#google:hover, #microsoft:hover, #apple:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+#google:focus, #microsoft:focus, #apple:focus {
+    outline: none;
+    border-color: rgb(0, 123, 255);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+#google:active, #microsoft:active, #apple:active {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+#footer {
+    background: linear-gradient(135deg, #ffffff 0%, #e8e8ed 100%);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+    border-top: 1px solid rgba(200, 200, 210, 0.3);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#footer p {
+    color: #999;
+    font-size: 13px;
+    margin: 0;
+    letter-spacing: 0.5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+    
+    #login-head {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    #inputs-wrapper {
+        padding: 20px 15px;
+        width: 100%;
+    }
+    
+    #google, #microsoft, #apple {
+        width: 45px;
+        height: 45px;
+    }
+    
+    #h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 10px;
+    }
+    
+    #login-head {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    #inputs-wrapper {
+        padding: 15px 10px;
+        gap: 15px;
+    }
+    
+    #email, #password {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    
+    #button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    
+    #google, #microsoft, #apple {
+        width: 40px;
+        height: 40px;
+        margin: 8px;
+    }
+    
+    #login-with-container {
+        gap: 15px;
+    }
+    
+    #footer {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+}
